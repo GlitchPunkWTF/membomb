@@ -9,7 +9,7 @@ int main()
     while (1)
     {
         char *mem;
-        mem = (int *)calloc(sizeof(char), mempagesize);
+        mem = (char *)calloc(sizeof(char), mempagesize);
     }
 #endif //BOMB
 }
