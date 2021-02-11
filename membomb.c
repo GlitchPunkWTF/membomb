@@ -1,17 +1,15 @@
-#include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
-
-#define VAL 1024 * 1024
-#define OUT
+#define BOMB
 
 int main()
 {
+    long mempagesize = sysconf(_SC_PAGESIZE);
+#ifdef BOMB
     while (1)
     {
-        int *mem;
-        mem = (int *)malloc(VAL);
-#ifdef OUT
-        printf("%X\n", mem);
-#endif
+        char *mem;
+        mem = (int *)calloc(sizeof(char), mempagesize);
     }
+#endif //BOMB
 }
