@@ -1,4 +1,4 @@
-# Simple memory allocation bomb written on c
+# Simple memory allocation bomb on C
 
 ## Compilation
 
@@ -12,6 +12,3 @@
 >>> chmod +x membomb
 >>> ./membomb
 ```
-
-> You can also try to increase/decrease amount of RAM, allocating per iteration by editing **VAL**
-> Or disable console out by commenting defenition of **OUT**
